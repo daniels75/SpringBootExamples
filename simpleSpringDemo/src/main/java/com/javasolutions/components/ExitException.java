@@ -1,4 +1,4 @@
-package com.javasolution;
+package com.javasolutions.components;
 
 import org.springframework.boot.ExitCodeGenerator;
 
