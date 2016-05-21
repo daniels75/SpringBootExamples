@@ -32,6 +32,8 @@ public class SimpleSpringDemoApplication implements CommandLineRunner {
 		}
 	}
 
+
+	
 	public static void main(String[] args) throws Exception {
 		System.out.println(">>>> test1");
 		SpringApplication.run(SimpleSpringDemoApplication.class, args);
