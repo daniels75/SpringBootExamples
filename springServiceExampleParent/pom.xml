@@ -23,9 +23,12 @@
 
 	<modules>
 		<module>springExampleCommonService</module>
+		<!-- specialized modules -->
+	    <!--
 		<module>springExampleDefaultService</module>
 		<module>springExampleIngService</module>
 		<module>springExamplePkoBpService</module>
+		-->
 		<module>springExampleWeb</module>
 	</modules>
 
@@ -103,4 +106,35 @@
 		</plugins>
 	</build>
 
+	
+	<profiles>
+		<profile>
+			<id>default</id>
+			<activation>
+				<activeByDefault>false</activeByDefault>
+			</activation>
+			<modules>
+				<module>springExampleDefaultService</module>
+			</modules>
+		</profile>
+		<profile>
+			<id>ing</id>
+			<activation>
+				<activeByDefault>false</activeByDefault>
+			</activation>
+			<modules>
+				<module>springExampleIngService</module>
+			</modules>
+		</profile>
+		<profile>
+			<id>pkobp</id>
+			<activation>
+				<activeByDefault>false</activeByDefault>
+			</activation>
+			<modules>
+				<module>springExamplePkoBpService</module>
+			</modules>
+		</profile>
+	</profiles>	
+	
 </project>
