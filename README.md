@@ -19,10 +19,12 @@ In the Spring Service Example have 3 service implementations
 
 =======================
 Compilation 
+=======================
+
 Here we have 2 options
 -  compile everything - you have to uncomment modules in the parent pom
 -  compile concrete module: default or ing or pkobp
-=======================
+
 How to compile (here we compile concrete module and after that we whant to run concrete service implementations)
 
 Default compilation 
@@ -37,6 +39,7 @@ mvn clean install -Ppkobp
 =======================
 How to run
 =======================
+
 <your_directory>/springServiceExampleParent>java -jar springExampleWeb\target\springExampleWeb-1.0-SNAPSHOT.jar
 
 How to check services:
