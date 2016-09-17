@@ -1,6 +1,9 @@
+=======================
+springServiceExampleParent
+=======================
 
-The main purpose is thow show how you can use a Maven with 3 options of the Service Implementation 
-- in the web module we have only a REST service with a interface from commons, so we don't have here any concrete implemenation
+The main purpose of the springServiceExampleParent project is show how you can use a Maven with 3 options of the Service Implementation 
+- in the web module we have only a REST service with a interface from commons, so we DON'T have here any concrete implemenation
 - in the default we have default service implementation
 - in the ing module we have a concrete implemation for ING
 - in the pkobp module we have a PKO BP implementation
