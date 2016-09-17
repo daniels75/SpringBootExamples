@@ -1,0 +1,107 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+
+	<parent>
+		<groupId>com.daniels.springboot.examples</groupId>
+		<artifactId>springServiceExampleParent</artifactId>
+		<version>1.0-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>springExampleWeb</artifactId>
+	<packaging>jar</packaging>
+	<name>SpringServiceExample Web</name>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.daniels.springboot.examples</groupId>
+			<artifactId>springExampleCommonService</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<!-- tag::actuator[] -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+		<!-- end::actuator[] -->
+		<!-- tag::tests[] -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<!-- end::tests[] -->
+
+	</dependencies>
+
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<artifactId>maven-failsafe-plugin</artifactId>
+				<executions>
+					<execution>
+						<goals>
+							<goal>integration-test</goal>
+							<goal>verify</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+	<profiles>
+		<profile>
+			<id>default</id>
+			<activation>
+				<activeByDefault>false</activeByDefault>
+			</activation>
+			<dependencies>
+				<dependency>
+					<groupId>com.daniels.springboot.examples</groupId>
+					<artifactId>springExampleDefaultService</artifactId>
+				</dependency>	  
+			</dependencies>
+			<build>
+			</build>
+		</profile>
+		<profile>
+			<id>ing</id>
+			<activation>
+				<activeByDefault>false</activeByDefault>
+			</activation>
+			<dependencies>
+				<dependency>
+					<groupId>com.daniels.springboot.examples</groupId>
+					<artifactId>springExampleIngService</artifactId>
+				</dependency>	  
+			</dependencies>
+			<build>
+			</build>
+		</profile>
+		<profile>
+			<id>pkobp</id>
+			<activation>
+				<activeByDefault>false</activeByDefault>
+			</activation>
+			<dependencies>
+				<dependency>
+					<groupId>com.daniels.springboot.examples</groupId>
+					<artifactId>springExamplePkoBpService</artifactId>
+				</dependency>	  
+			</dependencies>
+			<build>
+			</build>
+		</profile>		
+	</profiles>
+</project>
